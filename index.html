@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGPSM — Future Forward Fashion</title>
+    <style>
+        :root {
+            --pad-x: clamp(1.25rem, 4.5vw, 5rem);
+            --pad-y: clamp(1rem, 3vh, 4rem);
+            --header-pt: clamp(1.25rem, 2.5vh, 2.5rem);
+            --gap-nav: clamp(1rem, 2.2vw, 2.25rem);
+            --logo: clamp(1.35rem, 1.2vw + 0.9rem, 2.1rem);
+            --logo-deg: clamp(0.65rem, 0.4vw + 0.45rem, 0.9rem);
+            --nav: clamp(0.65rem, 0.35vw + 0.5rem, 0.875rem);
+            --headline: clamp(2.15rem, 4.5vw + 0.75rem, 5.25rem);
+            --body: clamp(0.7rem, 0.35vw + 0.55rem, 0.9rem);
+            --feature-pad: clamp(1rem, 1.5vw, 1.75rem);
+            --feature-min: clamp(13rem, 18vw, 20rem);
+            --globe: clamp(2.25rem, 2.5vw + 1rem, 3.25rem);
+            --checker-w: clamp(2.75rem, 4.5vw, 6.5rem);
+            --checker-h: clamp(1.35rem, 2.2vw, 3rem);
+            --corner: clamp(0.65rem, 0.4vw + 0.4rem, 0.95rem);
+            --icon: clamp(1rem, 0.6vw + 0.7rem, 1.35rem);
+            --main-py: clamp(1.25rem, 4vh, 4rem);
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col relative overflow-hidden">
+    <!-- Header -->
+    <header class="z-20 flex justify-between items-center" style="padding-inline: var(--pad-x); padding-top: var(--header-pt);">
+        <div class="font-orbitron font-black tracking-[0.15em]" style="font-size: var(--logo);">
+            LGPSM<span class="inline-block" style="font-size: var(--logo-deg); transform: translateY(-0.5rem) margin-left: 0.5rem;">˚</span>
+        </div>
+        <nav class="flex items-center uppercase tracking-[0.2em] font-medium" style="font-size: var(--nav); gap: var(--gap-nav);">
+            <span>SHOP</span><span>COLLECTIONS</span><span>JOURNAL</span>
+            <span class="text-gray-300">|</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: var(--icon); height: var(--icon);"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </nav>
+    </header>
+
+    <!-- Main Hero -->
+    <main class="flex-1 flex flex-col lg:flex-row justify-between" style="padding-inline: var(--pad-x); padding-block: var(--main-py);">
+        <div class="flex flex-col justify-center">
+            <svg class="mb-2" style="width: var(--corner); height: var(--corner);" viewBox="0 0 12 12" stroke="currentColor" stroke-width="1.5"><path d="M0 11.5V0.5H11.5"/></svg>
+            <h1 class="font-orbitron font-extrabold uppercase tracking-[0.08em] leading-[1.05]" style="font-size: var(--headline);">
+                FUTURE<br>FORWARD<br>FASHION
+            </h1>
+            <button class="mt-8 border border-gray-400 rounded-md uppercase tracking-[0.18em] flex items-center gap-2 px-4 py-2" style="font-size: var(--body); padding-inline: var(--btn-px); padding-block: var(--btn-py);">
+                SHOP NOW <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </button>
+        </div>
+        <div class="self-end border border-gray-200 relative" style="min-width: var(--feature-min); padding: var(--feature-pad);">
+            <svg class="mb-4" viewBox="0 0 64 64" stroke="currentColor" stroke-width="1.2" style="width: var(--globe); height: var(--globe);"><circle cx="32" cy="32" r="28"/><path d="M32 4c15 0 28 12.5 28 28s-13 28-28 28-28-12.5-28-28 13-28 28-28z"/></svg>
+            <p class="font-semibold uppercase tracking-[0.18em]" style="font-size: var(--body);">BEYOND TRENDS.<br>BUILT FOR TOMORROW.</p>
+        </div>
+    </main>
+</body>
+</html>
